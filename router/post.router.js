@@ -4,7 +4,7 @@ const PostController = require('../controller/post.controller.js')
 
 
 
-postRouter.get('/getposts', PostController.getPosts)
+postRouter.get('/posts', PostController.getPosts)
 postRouter.get('/post/:id', PostController.getPost)
 postRouter.post('/addpost', PostController.addPost)
 postRouter.put('/post', PostController.updatePost)

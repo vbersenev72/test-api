@@ -19,7 +19,7 @@ class PostController {
 	async addPost(req, res) {
 		try {
 
-
+			
 
 		} catch(e) {
 			console.log(e)

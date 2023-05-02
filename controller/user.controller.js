@@ -4,29 +4,6 @@ const db = require('../db.js')
 
 class UserController {
 
-	async getPosts(req, res) {
-		try {
-			const {name} = req.body
-			const posts = await db.query('SELECT * FROM post;')
-
-			res.json(posts.rows)
-		} catch(e) {
-			console.log(e)
-			res.status(400).json({message: "error", e})
-		}
-	}
-
-
-	async addPost(req, res) {
-		try {
-
-
-
-		} catch(e) {
-			console.log(e)
-			res.status(400).json({message: "error", e})
-		}
-	}
 
 
 	async addUser(req, res) {
@@ -96,41 +73,6 @@ class UserController {
 		}
 	}
 
-
-	async getPost(req, res) {
-		try {
-
-
-
-		} catch(e) {
-			console.log(e)
-			res.status(400).json({message: "error", e})
-		}
-	}
-
-
-	async updatePost(req, res) {
-		try {
-
-
-
-		} catch(e) {
-			console.log(e)
-			res.status(400).json({message: "error", e})
-		}
-	}
-
-
-	async deletePost(req, res) {
-		try {
-
-
-
-		} catch(e) {
-			console.log(e)
-			res.status(400).json({message: "error", e})
-		}
-	}
 }
 
 
