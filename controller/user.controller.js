@@ -4,14 +4,12 @@ const db = require('../db.js')
 
 class UserController {
 
-
-
 	async addUser(req, res) {
 		try {
 			const {name, username} = req.body
 			const newPerson = await db.query('INSERT INTO person (name, username) values ($1, $2) RETURNING *;', [name, username])
 
-			res.json({newPerson})
+			res.json(newPerson.rows[0])
 		} catch(e) {
 			console.log(e)
 			res.status(400).json({message: "error", e})

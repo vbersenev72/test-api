@@ -4,11 +4,11 @@ const PostController = require('../controller/post.controller.js')
 
 
 
-postRouter.get('/posts', PostController.getPosts)
+postRouter.post('/posts', PostController.getPosts)
 postRouter.get('/post/:id', PostController.getPost)
 postRouter.post('/addpost', PostController.addPost)
 postRouter.put('/post', PostController.updatePost)
-postRouter.delete('/post/:id', PostController.deletePost)
+postRouter.delete('/post', PostController.deletePost)
 
 
 
